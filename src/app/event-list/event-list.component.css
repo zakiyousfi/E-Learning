@@ -1,0 +1,46 @@
+.container{
+    margin-top: 100px;
+}
+.event-card {
+    transition: transform 0.3s, border-color 0.3s;
+    border: 2px solid #cc0033; /* UA red */
+  }
+  
+  .event-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  
+  
+  .read-more-btn {
+    color: #cc0033; /* UA red */
+    cursor: pointer;
+  }
+  
+  .read-more-btn:hover {
+    text-decoration: underline;
+  }
+  
+  .social-icons {
+    margin-top: 10px;
+  }
+  
+  .btn-social {
+    color: #cc0033; /* UA red */
+    margin-right: 5px;
+    transition: transform 0.3s;
+  }
+  
+  .btn-social:hover {
+    color: #990033; /* Slightly darker shade of UA red */
+    transform: scale(1.1);
+  }
+  
+  .text-ua-red {
+    color: #cc0033; /* UA red */
+  }
+  
+  .border-ua-red {
+    border-color: #cc0033 !important; /* UA red */
+  }
+  

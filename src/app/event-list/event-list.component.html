@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let event of events">
+        <div class="card mb-4 event-card">
+          <img [src]="event.image" class="card-img-top" alt="Event Image">
+          <div class="card-body">
+            <h5 class="card-title">{{ event.name }}</h5>
+            <p class="card-text">{{ event.description }}</p>
+            <button class="btn btn-link read-more-btn" (click)="toggleDescription(event)">
+              Read {{ event.expanded ? 'Less' : 'More' }} <i class="fas fa-chevron-down"></i>
+            </button>
+            <p class="card-text event-description" *ngIf="event.expanded">{{ event.fullDescription }}</p>
+            <div class="social-icons">
+                <a href="#" class="btn btn-social btn-twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="btn btn-social btn-facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="btn btn-social btn-instagram"><i class="fab fa-instagram"></i></a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

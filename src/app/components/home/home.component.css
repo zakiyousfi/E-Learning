@@ -1,0 +1,24 @@
+.hero-content{
+    display: flex;
+    height: 600px;
+    justify-content: space-between;
+
+}
+
+.left-side{
+    width: 40%;
+    margin-top: 70px;
+}
+.left-side h1{
+    color: var(--color-secondary);
+    margin-bottom: 30px;
+}
+.right-side{
+    width: 55%;
+
+}
+
+#carouselExampleControls img{
+    height: 600px;
+
+}

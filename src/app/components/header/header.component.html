@@ -1,0 +1,168 @@
+<section id="header" *ngIf="userId!=4b39">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+      <div class="container-fluid ">
+        <div class="navbar-brand" href="#">
+          <img src="./../../../assets/Unilink-transformed-removebg-preview.png" alt="unilink">
+          <h1 class="logo-text">
+            <img src="./../../assets/images/ggg-removebg-preview.png" alt="">
+          </h1>
+        </div>
+        <button class="navbar-toggler btn-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active-link"  aria-current="page" routerLink="/Home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  routerLink="/About">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"  routerLink="/Posters">Events</a>
+              </li>
+                
+            <li class="nav-item">
+                <a class="nav-link"  routerLink="/News">Exemaes</a>
+              </li>
+          
+            <li class="nav-item">
+              <a class="nav-link"  routerLink="/Home/contact">Contact</a>
+            </li>
+           
+          
+          </ul>
+          <div class="d-flex" >
+            <button class="btn-log-in" data-bs-toggle="modal" data-bs-target="#logInModal"  data-bs-toggle="modal" data-bs-target="#authentification">Log In</button>
+          </div>
+          <!-- <div class="d-flex" >
+            <button class="btn btn-outline-danger mx-4">Log Out</button>
+            <img alt=""  data-bs-toggle="modal" data-bs-target="#profileModal" class="profileImage">
+          </div> -->
+        </div>
+      </div>
+  </nav>
+</section>
+
+
+
+<div class="modal fade" id="authentification" tabindex="-1" aria-labelledby="authentificationLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <div class="modal-body">
+            <div class="authentification" id="container">
+                <div class="form-container sign-up">
+                    <form #signUpFrom="ngForm" (sbumit)="signUp(signUpFrom)">
+                      <h2 >Create Account</h2>
+                       <div class="form-contant">
+                        
+                        <div class="form-group">
+                          <i class="fa fa-user"></i>
+                            <label for="" class="mb-2">Full Name</label>
+                            <input type="text" name="fullName" class="form-control mb-3"  #fullName="ngModel" required ngModel (blur)="test(fullName.errors?.['required'] ,' the fulll name  is required field !!')">
+                           
+                        </div>
+                        <div class="form-group">
+                            <i class="fa fa-envelope"></i>
+                            <label for="" class="mb-2">Email</label>
+                            <input type="email" name="email" class="form-control mb-3"  required ngModel #email="ngModel" pattern="[a-zA-Z0-9]+@[a-zA-Z-0-9]+.com" (blur)="test(email.errors?.['required'],' the email is  a required field')"  (blur)="patternTest(email.errors?.['pattern'],'the email doesn t seem right')">
+                           
+                        </div>
+                        <div class="form-group">
+                            <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                            <label for="" class="mb-2">Password</label>
+                            <input type="password" name="password" class="form-control mb-3"  required ngModel #password="ngModel" pattern="[a-zA-Z0-9]{8,}"(blur)="patternTest(password.errors?.['pattern'],'the password doesn t seem right')">
+                           
+                        </div>
+                        <button class="w-100"  [disabled]="signUpFrom.invalid" [ngStyle]="{'cursor': signUpFrom.invalid ? 'not-allowed' : 'pointer'}" (click)="signUp(signUpFrom)">Sign Up</button>
+                        <div class="devegin">
+                            <div class="line"></div>
+                            <p>OR</p>
+                            <div class="line"></div>
+                        </div>
+                        <div class="social-account">
+                            <div class="account f_logo">
+                                <img src="./../../../assets/f_logo_RGB-White_72.png" alt="">
+                                <p>Login with Facebook</p>
+                            </div>
+                            <div class="account">
+                                <img src="./../../../assets/Google_icon48x48.png" alt="">
+                                <p>Login with Google</p>
+                            </div>
+                        </div>
+                       </div>
+                       <div class="form-bottom">
+                        <p>Already have an account</p>
+                        <a  (click)="activeLoginPanel()">Login</a>
+                    </div>
+                    </form>
+                </div>
+                <div class="form-container sign-in">
+                    <form #Login="ngForm">
+                       <h2>Log In</h2>
+                        <div class="form-contant">
+                            <div class="form-group">
+                                <i class="fa fa-envelope"></i>
+
+                                <label for="" class="mb-2">Email</label>
+                                <input type="email" name="login" class="form-control mb-3"required ngModel #login="ngModel">
+                               
+                            </div>
+                            <div class="form-group">
+                                <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                                <label for="" class="mb-2">Password</label>
+                                <input type="password" name="p" class="form-control mb-3" required ngModel #p="ngModel">
+                               
+                            </div>
+                            <div class="forgot-section">
+                                <div class="remember-me">
+                                    <input type="checkbox" name="" id="">
+                                    <p>Remember me</p>
+                                </div>
+                                <a class="forgot" >I forgot my password</a>
+                            </div>
+                            <button class="w-100" (click)="logIn(Login)">Log In</button>
+                            <div class="devegin">
+                                <div class="line"></div>
+                                <p>OR</p>
+                                <div class="line"></div>
+                            </div>
+                           
+                            <div class="social-account">
+                                <div class="account f_logo">
+                                    <img src="./../../../assets/f_logo_RGB-White_72.png"alt="">
+                                    <p>Login with Facebook</p>
+                                </div>
+                                <div class="account">
+                                    <img src="./../../../assets/Google_icon48x48.png" alt="">
+                                    <p>Login with Google</p>
+                                </div>
+                            </div>
+                            <div class="form-bottom">
+                                <p>I don't have an account</p>
+                                <a  (click)="activeregisterPanel()">Sign Up</a>
+                                </div>
+                           
+                        </div>
+                    </form>
+                </div>
+                <div class="toggle-container">
+                    <div class="toggle">
+                        <div class="toggle-panel toggle-left">
+                            <h1>Welcome Back!</h1>
+                            <p>Enter your personal details to use all of site features</p>
+                            <button class="hidden" id="login"  (click)="activeLoginPanel()">Log In</button>
+                        </div>
+                        <div class="toggle-panel toggle-right">
+                            <h1>Hello, Friend!</h1>
+                            <p>Register with your personal details to use all of site features</p>
+                            <button class="hidden" id="register" (click)="activeregisterPanel()">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+      </div>
+    </div>
+  </div>

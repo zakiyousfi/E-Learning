@@ -1,0 +1,174 @@
+
+/* FOOTER */
+footer {
+	padding: 3rem 0 1rem;
+	background: var(--color-primary);
+	color: var(--white);
+}
+footer h3 {
+	margin-bottom: 1rem;
+	max-width: 768px;
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 2rem;
+}
+button{
+    background-color: var(--color-secondary);
+    color: white;
+    padding: 10px 20px ;
+}
+footer form {
+	display: flex;
+	align-items: center;
+	max-width: 576px;
+	grid-gap: 1rem;
+	margin: 0 auto;
+	justify-content: center;
+	margin-bottom: 3rem;
+	flex-wrap: wrap;
+}
+footer form input {
+	flex-grow: 1;
+	padding: 1rem 1.25rem;
+	outline: none;
+	border: none;
+	border-radius: 4px;
+	flex-basis: 300px;
+}
+footer form .btn {
+	outline: none;
+	border: none;
+	cursor: pointer;
+    background-color: --color-secondary;
+}
+footer hr {
+	border: none;
+	height: 1px;
+	background: var(--light);
+	margin-bottom: 1rem;
+}
+footer .bottom {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	grid-gap: 1rem;
+}
+footer .bottom .brand {
+	font-size: 1.75rem;
+	font-weight: 700;
+	color: var(--white);
+}
+/* FOOTER */
+
+
+
+
+
+
+
+
+/* BREAKPOINTS */
+@media screen and (max-width: 1200px) {
+	.container {
+		max-width: 991px;
+	}
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 991px) {
+	.container {
+		max-width: 768px;
+	}
+
+
+
+	#about .container {
+		grid-gap: 2rem;
+	}
+	#about img {
+		max-width: 400px;
+	}
+
+
+
+	#menu .menu__list {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+	.container {
+		max-width: 576px;
+	}
+
+
+
+
+	#about .container {
+		flex-wrap: wrap;
+	}
+	#about img {
+		max-width: 100%;
+	}
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 576px) {
+	#features .container {
+		flex-wrap: wrap;
+	}
+
+
+
+	nav .toggle-navbar {
+		display: block;
+	}
+	nav .nav__menu {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		padding: 1.25rem;
+		background: var(--dark);
+		flex-direction: column;
+		grid-gap: 1rem;
+		align-items: flex-start;
+		opacity: 0;
+		visibility: hidden;
+		transition: all .2s;
+	}
+	nav .nav__menu.active {
+		opacity: 1;
+		visibility: visible;
+	}
+
+
+
+	header h1 {
+		font-size: 2.25rem;
+	}
+
+
+
+	#menu .menu__list {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+/* BREAKPOINTS */

@@ -1,0 +1,48 @@
+:root{
+    /* COLORS */
+    --color-primary:#0c234b;
+    --color-secondary:rgb(171,5,32);
+    --color-text:#330707;
+    --color-light:rgba(255, 255, 255, 0.58);
+    --color-bg-primary:#fafafa;
+
+    /* FONTS */
+    /* --font-primary:'Open Sans', 'Helvetica Neue', sans-serif; */
+    --font-bold:700;
+    --font-light:400;
+    --font-size-text:13px;
+    --font-size-titel:20px;
+    --font-size-section:48px;
+    
+    /* SIZES */
+    --size-primary:25px;
+    --size-half:10px;
+    --size-double:50px;
+    --margin-primary:var(--size-primary);
+    --margin-half:var(--size-half);
+    --margin-double:var(--size-double);
+    --padding-primary:var(--size-primary);
+    --padding-half:var(--size-half);
+    --padding-double:var(--size-double);
+    --white: #FFF;
+	--light: #F6F6F6;
+	--dark: #303242;
+	--orange: #F47E10;
+	--orange-d-1: #E57105;
+	--grey: #AAA;
+    
+
+}
+.btn-form{
+    padding: 10px 20px ;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-secondary);
+    transition: all ease .5s;
+    cursor:inherit;
+    color: white;
+    margin: 10px;
+}
+.btn-form:active{
+    transform: scale(.9);
+}

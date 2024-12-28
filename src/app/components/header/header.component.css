@@ -1,0 +1,477 @@
+
+.navbar-brand{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar-brand span{
+    color: var(--color-secondary);
+}
+.navbar-brand img{
+    width: 150px;
+}
+.logo-text{
+    font-family:sans-serif;
+    margin-top: 7px;
+}
+.logo-text img{
+    width: 120px;
+    height: auto;
+    margin-left: 20px;
+}
+.navbar-toggler{
+    border: 3px solid var(--color-secondary);
+}
+
+.navbar-nav{
+    margin: auto;
+}
+.nav-item{
+    padding: var(--padding-primary) var(--padding-half);
+    margin: 0;
+
+}
+.nav-link{
+    color: black;
+    font-weight: 500;
+    font-size: 18px;
+}
+.nav-link:hover{
+    text-decoration: underline;
+    color: var(--color-secondary);
+}
+.nav-link:active{
+    text-decoration: underline;
+    color: var(--color-secondary);
+}
+.active-link{
+    text-decoration: underline;
+    color: var(--color-secondary);
+}
+.btn-log-in,.btn-sign-up{
+    border: none;
+    padding:var(--padding-half) calc( var(--padding-primary)*1.5);
+    border-radius: 5px;
+    margin: 0 var(--margin-half);
+    transition: all  ease-in .5s;
+}
+.btn-log-in{
+    background-color: var(--color-secondary);
+    color: white;
+
+}
+
+.btn-sign-up{
+    border: 1px solid var(--color-secondary);
+    color: var(--color-secondary);
+}
+
+.btn-log-in:active,.btn-sign-up:active{
+    transform: scale(.9);
+}
+.connect{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 90%;
+    gap: 10px;
+
+}
+.connect a{
+    color:black;
+
+}
+.contant{
+    justify-content: space-between;
+}
+.d-flex{
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0;
+}
+.d-flex p{
+    margin-top: 10px;
+    color: black;
+}
+.d-flex a{
+    color: black;
+}
+.d-flex img{
+    width: 32px;
+    height: 30px;
+}
+.d-flex strong:hover{
+    text-decoration: underline;
+    
+}
+
+.forgot{
+    text-align: center;
+}
+.singn-up a{
+    margin-bottom:10px;
+}
+
+.singn-up-contant{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.singn-up-contant a,.singn-up-contant h6{
+    background-color:#d8d4d477;
+    width: 50%;
+    text-align: center;
+    margin: var(--margin-half) 0;
+    padding: var(--padding-half) var(--padding-primary);
+    border-radius: 5px;
+}
+.singn-up-contant a:hover{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.profileImage{
+    border-radius: 50%;
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+}
+#profileModal .modal-content{
+    margin-top: 80px;
+    margin-left: 82%;
+    width: 400px;
+}
+#profileModal .modal-header-title h4{
+    color: var(--color-secondary);
+    margin: 20px 0;
+} 
+#profileModal .modal-body{
+    text-align: center;
+}
+#profileModal .modal-body   img{
+    width: 150px;
+    border-radius: 50%;
+    height: auto;
+    max-height: 150px;
+    margin-bottom: 20px;
+    cursor: pointer;
+
+}
+#profileModal .d-flex{
+    justify-content: space-between;
+}
+.file-input-btn {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+
+  .file-input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    
+
+  }
+
+  .btn-style {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #48a7ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+.actions{
+    border: red solid;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+@media(max-width:1000px){
+    .nav-item{
+        padding:5px var(--padding-half);
+    }
+}
+
+.modal-dialog {
+    width: 850px;
+    max-width: 100%;
+    padding: 0;
+    border-radius: 30px;
+}
+
+#authentification .modal-content {
+    width: 100%;
+    padding: 0;
+    border-radius: 30px;
+}
+#authentification  .modal-body {
+    padding: 0;
+    border-radius: 30px;
+
+}
+.authentification {
+    background-color: #fff;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    width: 850px;
+    max-width: 100%;
+    height: 600px;
+    max-height: 800px;
+}
+
+.authentification p {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+}
+
+
+
+
+
+.authentification button {
+    background-color: #512da8;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.authentification button.hidden {
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.authentification form {
+    background-color: #fff;
+    height:90%;
+    width: 95%;
+    margin: 20px auto;
+    padding: 10px;
+
+}
+form h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.form-group{
+    position: relative;
+}
+.form-group i{
+    color: var(--primary-color);
+    position: absolute;
+    top: 62%;
+    left: 15px;
+}
+.form-control{
+    box-shadow: none;
+    padding-left: 35px;
+}
+.form-control:focus{
+    border: 1px solid var(--primary-color);
+}
+
+
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 600px;
+    transition: all 0.6s ease-in-out;
+
+}
+
+.forgot-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remember-me{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.remember-me input{
+    margin-top: 3px;
+}
+.forgot{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.devegin{
+    display: flex;
+    width: 100%;
+    font-size: 12px;
+    color: #8a8a8a;
+    font-weight: bold;
+    gap: 20px;
+    align-items: center;
+    margin:0 auto ;
+
+}
+.line{
+    background-color: #8a8a8a;
+    flex: 1;
+    height: 1px;
+}
+.social-account{
+    display: flex;
+    align-items: center;
+    height: 35px;
+    gap:0 20px;
+    margin-top: 15px;
+}
+.f_logo{
+    background-color: #1877f2;
+    color: white;
+}
+.account{
+    border-radius: 2px;
+    display: flex;
+    gap: 0 15px;
+    height: 35px;
+    align-items: center;
+    padding: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.107);
+
+
+
+}
+.social-account img{
+    width: 30px;
+    height: 30px;
+}
+
+.form-bottom{
+    width: 80%;
+    margin: 20px 0;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.form-bottom a{
+    cursor: pointer;
+    color: #1877f2;
+}
+.sign-in {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.authentification.active .sign-in {
+    transform: translateX(100%);
+}
+
+.sign-up {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.authentification.active .sign-up {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+}
+
+@keyframes move {
+    0%, 49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+    50%, 100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+
+
+
+.toggle-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 0 0 100px;
+    z-index: 1000;
+}
+
+.authentification.active .toggle-container {
+    transform: translateX(-100%);
+    border-radius: 0 150px 100px 0;
+}
+
+.toggle {
+    background-color: --color-primary;
+    height: 100%;
+    background: linear-gradient(to right, #5c6bc0, #512da8);
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.authentification.active .toggle {
+    transform: translateX(50%);
+}
+
+.toggle-panel {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.toggle-left {
+    transform: translateX(-200%);
+}
+
+.authentification.active .toggle-left {
+    transform: translateX(0);
+}
+
+.toggle-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.authentification.active .toggle-right {
+    transform: translateX(200%);
+}
