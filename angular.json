@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "PrestigeTN": {
+    "E-Learning": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -62,10 +62,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "PrestigeTN:build:production"
+              "browserTarget": "E-Learning:build:production"
             },
             "development": {
-              "browserTarget": "PrestigeTN:build:development"
+              "browserTarget": "E-Learning:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -73,7 +73,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "PrestigeTN:build"
+            "browserTarget": "E-Learning:build"
           }
         },
         "test": {
